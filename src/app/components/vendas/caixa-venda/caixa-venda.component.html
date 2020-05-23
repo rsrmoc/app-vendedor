@@ -1,0 +1,23 @@
+<h1 class="center">Caixas Proxima do Cliente</h1>
+ 
+<table class="table">
+	<tr> 
+		<th>Caixa </th>
+		<th>Descrição</th>
+		<th>Endereço da Caixa</th>
+		<th class="center">Distancia</th>
+		<th>Ação</th>
+    </tr> 
+	<tr *ngFor="let ArrayVenda of venda"> 
+        <td class="bold">{{ArrayVenda.cd_caixa}}</td>
+        <td>{{ArrayVenda.nm_caixa}}</td>
+        <td>{{ArrayVenda.end_cordenadas}}</td>
+        <td class="center">{{ArrayVenda.distancia}} Mts</td> 
+        <td class="acao">
+            <a routerLink="/vendas/create/{{ArrayVenda.cd_caixa}}/{{lat}}/{{long}}">
+                <img width="30" class="img_table" alt="Criar Vendas" src="../assets/img/op.png" />
+            </a> 
+        </td>
+	</tr> 
+
+</table>

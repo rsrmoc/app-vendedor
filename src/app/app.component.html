@@ -1,0 +1,41 @@
+ 
+<div class="toolbar" role="banner">
+  <img
+    width="70"
+    alt="Angular Logo"
+    src="../assets/img/logo.png"
+  />
+  <span>Sistema de Vendas</span>
+    <div class="spacer"></div>
+   
+</div>
+
+<div class="content" role="main">
+
+ 
+
+  <!-- Resources -->
+  <h2>Menu de Opções</h2>
+  <p>Selecione as opções desejada</p>
+
+  <div class="card-container">
+
+    <a class="card" routerLink='/'  > 
+      <span>Home</span> 
+    </a> 
+
+    <a class="card" routerLink='vendas/caixa' > 
+      <span>Gerar Venda</span> 
+    </a> 
+
+    <a class="card" routerLink='vendas/list'  > 
+      <span>Painel de Vendas</span> 
+    </a> 
+
+
+
+  </div>
+  
+</div>
+  
+<router-outlet></router-outlet>

@@ -1,0 +1,35 @@
+table{
+    width: 96%;
+    margin-left: 2%; 
+}
+.bold{
+    font-weight: bold;
+}
+
+.img_table{ padding-top: 5px;}
+
+.center{ text-align: center;}
+
+.right{ text-align: right;}
+
+.left{ text-align: left;}
+
+table thead {
+    background-color: #cacaca;
+    font-weight: bold;
+}
+
+table td{
+    border: 1px solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 6px;
+}
+
+h2{
+    text-align: center;;
+}
+
+.acao{
+    text-align: center;
+}

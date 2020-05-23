@@ -1,0 +1,29 @@
+<h1 class="center">Caixas Proxima do Cliente</h1>
+ 
+<table class="table">
+	<tr> 
+		<th>Codigo </th>
+		<th>Cliente</th>
+		<th>RG</th>
+		<th>latitude</th>
+		<th>Longitude</th>
+		<th>Caixa</th>
+		<th>valor</th>
+		<th>Ação</th>
+    </tr> 
+	<tr *ngFor="let ArrayVenda of venda"> 
+        <td class="bold">{{ArrayVenda.cd_venda}}</td>
+        <td>{{ArrayVenda.nm_cliente}}</td>
+        <td>{{ArrayVenda.rg}}</td>
+        <td>{{ArrayVenda.latitude}}</td>
+        <td class="">{{ArrayVenda.longitude}} </td> 
+        <td class="">{{ArrayVenda.cd_caixa}} </td> 
+        <td class="">{{ArrayVenda.valor}} </td> 
+        <td class="acao">
+            <a routerLink="/users/update/{{ArrayVenda.cd_venda}}">EDITAR</a> 
+            | 
+            <a  routerLink="/users/delete/{{ArrayVenda.cd_venda}}" >DELETAR</a> 
+        </td>
+	</tr> 
+
+</table>
