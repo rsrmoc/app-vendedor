@@ -32,10 +32,10 @@ export class CreateVendaComponent implements OnInit {
 
   save(){
     console.log(this.request);
-    this.vendaService.createUser(this.request).subscribe(res => {
+    this.vendaService.createVenda(this.request).subscribe(res => {
       this.response =res;
       alert('Usuario criado com sucesso!!!');
-      this.router.navigate(["/"]);
+      this.router.navigate(["/vendas/list"]);
     })
   } 
 

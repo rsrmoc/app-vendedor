@@ -1,3 +1,5 @@
+import { DeleteVendaComponent } from './components/vendas/delete-venda/delete-venda.component';
+import { UpdateVendaComponent } from './components/vendas/update-venda/update-venda.component';
 import { ListVendaComponent } from './components/vendas/list-venda/list-venda.component';
 import { CreateVendaComponent } from './components/vendas/create-venda/create-venda.component';
 import { CaixaVendaComponent } from './components/vendas/caixa-venda/caixa-venda.component';
@@ -11,6 +13,8 @@ const routes: Routes = [
   { path: 'vendas/caixa', component: CaixaVendaComponent },
   { path: 'vendas/create/:caixa/:lat/:long', component: CreateVendaComponent },
   { path: 'vendas/list', component: ListVendaComponent },
+  { path: 'vendas/update/:id', component: UpdateVendaComponent },
+  { path: 'vendas/delete/:id', component: DeleteVendaComponent },
 ];
 
 @NgModule({

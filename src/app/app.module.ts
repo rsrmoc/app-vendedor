@@ -1,3 +1,5 @@
+import { DeleteVendaComponent } from './components/vendas/delete-venda/delete-venda.component';
+import { UpdateVendaComponent } from './components/vendas/update-venda/update-venda.component';
 
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -28,7 +30,9 @@ import {MatIconModule} from '@angular/material/icon';
     HomeComponent,
     CaixaVendaComponent,  
     CreateVendaComponent,
-    ListVendaComponent
+    ListVendaComponent,
+    UpdateVendaComponent,
+    DeleteVendaComponent
   ],
   imports: [
     BrowserModule,

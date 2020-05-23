@@ -1,0 +1,31 @@
+<h1 class="center">Deletar Venda</h1>
+<div class="DivCad" *ngIf="request" >
+    <label>Caixa:
+        <input class="form-control" placeholder="Caixa" [(ngModel)]="request.cd_caixa"  >
+    </label>
+    <br> 
+    <label>Latitude:
+        <input class="form-control" placeholder="Latitude" [(ngModel)]="request.latitude" >
+    </label>
+    <br> 
+    <label>Longitude:
+        <input class="form-control" placeholder="Longitude" [(ngModel)]="request.longitude"  >
+    </label>
+    <br> 
+    <label>Nome Cliente:
+        <input class="form-control" placeholder="Cliente" [(ngModel)]="request.nm_cliente"  >
+    </label>
+    <br> 
+    <label>RG:
+        <input class="form-control" placeholder="rg" [(ngModel)]="request.rg"  >
+    </label>
+    <br> 
+    <label>Valor:
+        <input class="form-control" placeholder="valor" [(ngModel)]="request.valor"  >
+    </label>
+    <br>   
+    <button (click)="delete()" >Salvar Venda</button>
+    <br>     
+    <br> 
+</div>
+ 

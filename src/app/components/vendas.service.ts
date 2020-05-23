@@ -23,9 +23,26 @@ export class VendasService {
     return this.http.get<any[]>(_url);
   }
 
-  createUser(request: Venda): Observable<Venda> {
+  getVenda(id : string): Observable<Venda> {
+    const _url = `${this.url}/GetVenda/${id}`;
+    return this.http.get<Venda>(_url);
+  }
+
+  createVenda(request: Venda): Observable<Venda> {
     const _url_up = `${this.url}/CriarVenda`;
     return this.http.post<Venda>(_url_up,request);
+  }
+
+  updateVenda(id: string, request: any){
+    const _url_up = `${this.url}/CriarVenda/${id}`;
+    return this.http.put<Venda>(_url_up, JSON.stringify(request));
+  }
+
+  deleteVenda(id: string): Observable<Venda> {
+    const url = `${this.url}/DelVenda/${id}`;
+    return this.http.delete<Venda>(url).pipe(
+     
+    );
   }
 
 }
