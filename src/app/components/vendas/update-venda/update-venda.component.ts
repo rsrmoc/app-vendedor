@@ -29,6 +29,8 @@ export class UpdateVendaComponent implements OnInit {
   update(){
     this.vendasService.updateVenda(this.id, this.request).subscribe(res => {
       console.log(res);
+      //this.vendasService.showMessage('Atualizado Codigo ('+this.id+')');
+     // this.vendasService.showMessage("Produto excluido com sucesso!");
       alert('Atualizado Codigo ('+this.id+')');
       this.router.navigate(["/vendas/list"]);
      

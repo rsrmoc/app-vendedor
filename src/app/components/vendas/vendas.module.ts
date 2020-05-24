@@ -7,3 +7,4 @@ export interface Venda {
   cd_caixa: string;
   valor: string;
 }
+

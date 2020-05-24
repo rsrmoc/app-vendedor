@@ -1,3 +1,4 @@
+<!--  
 <h1 class="center">Deletar Venda</h1>
 <div class="DivCad" *ngIf="request" >
     <label>Caixa:
@@ -28,4 +29,43 @@
     <br>     
     <br> 
 </div>
- 
+-->
+
+<mat-card>
+    <div class="DivCad">
+
+        <mat-card-title>Deletar Venda</mat-card-title>
+        <form>
+            <mat-form-field>
+                <input matInput placeholder="Caixa" [(ngModel)]="request.cd_caixa" name="cd_caixa">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput placeholder="Latitude" [(ngModel)]="request.latitude" name="latitude">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput placeholder="Longitude" [(ngModel)]="request.longitude" name="longitude">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput placeholder="Cliente" [(ngModel)]="request.nm_cliente" name="nm_cliente">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput placeholder="RG" [(ngModel)]="request.rg" name="rg">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput placeholder="Valor R$   " [(ngModel)]="request.valor" name="valor">
+            </mat-form-field>
+            <br /><br />
+            <button mat-raised-button (click)="delete()" color="primary">
+                Salvar
+            </button>
+            <br />
+        </form>
+
+    </div>
+
+</mat-card>

@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class VendasService {
 
   private url = 'http://rpsys.com.br/Rotinas/ApiVenda';
+  snackBar: any;
 
   constructor( private http: HttpClient) { }
 
@@ -43,6 +44,15 @@ export class VendasService {
     return this.http.delete<Venda>(url).pipe(
      
     );
+  }
+
+  showMessage(msg: string, isError: boolean = false): void {
+    this.snackBar.open(msg, "X", {
+      duration: 3000,
+      horizontalPosition: "right",
+      verticalPosition: "top",
+      panelClass: isError ? ["msg-error"] : ["msg-success"],
+    });
   }
 
 }
