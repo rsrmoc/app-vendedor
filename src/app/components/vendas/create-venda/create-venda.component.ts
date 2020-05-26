@@ -2,6 +2,7 @@ import { VendasService } from './../../vendas.service';
 import { Venda } from './../vendas.module';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -22,7 +23,9 @@ export class CreateVendaComponent implements OnInit {
 
   response: Venda;
 
-  constructor(private vendaService: VendasService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private vendaService: VendasService, 
+    private router: Router, 
+    private route: ActivatedRoute, private snack: MatSnackBar) { }
 
   ngOnInit(): void {
     this.request.latitude = this.route.snapshot.paramMap.get('lat');
@@ -33,10 +36,24 @@ export class CreateVendaComponent implements OnInit {
   save(){
     console.log(this.request);
     this.vendaService.createVenda(this.request).subscribe(res => {
-      this.response =res;
-      alert('Usuario criado com sucesso!!!');
-      this.router.navigate(["/vendas/list"]);
+      //this.response =res;
+      //this.response = res[0];
+      console.log();
+      if(res[0]=true){
+        this.openSnack('Usuário criado com sucesso!!!', '');
+        this.router.navigate(["/vendas/list"]);
+      }
+      // alert('Usuario criado com sucesso!!!');
+
     })
   } 
+
+  openSnack(message: string, action: string) {
+
+    this.snack.open(message, action, {
+      duration: 3000,
+      verticalPosition: 'top'
+    })
+  }
 
 }

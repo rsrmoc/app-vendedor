@@ -1,5 +1,40 @@
 <h1 class="center">Caixas Proxima do Cliente</h1>
  
+<mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="Caixa">
+        <mat-header-cell *matHeaderCellDef> Caixa </mat-header-cell>
+        <mat-cell *matCellDef="let d" data-label="Caixa"> {{d.cd_caixa}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Descrição">
+        <mat-header-cell *matHeaderCellDef> Descrição </mat-header-cell>
+        <mat-cell *matCellDef="let d" data-label="Descrição"> {{d.nm_caixa}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Endereço da Caixa">
+        <mat-header-cell *matHeaderCellDef> Endereço da Caixa </mat-header-cell>
+        <mat-cell *matCellDef="let d" data-label="Endereço da caixa"> {{d.end_cordenadas}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Distancia">
+        <mat-header-cell *matHeaderCellDef> Distancia </mat-header-cell>
+        <mat-cell *matCellDef="let d" data-label="Distancia"> {{d.distancia}} Mts </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Ação">
+        <mat-header-cell *matHeaderCellDef> Ação </mat-header-cell>
+        <mat-cell *matCellDef="let d" data-label="Ação"> 
+            <a routerLink="/vendas/create/{{d.cd_caixa}}/{{lat}}/{{long}}">
+                <img width="30" class="img_table" alt="Criar Vendas" src="../assets/img/op.png" />
+            </a> 
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+<!--
 <table class="table">
 	<tr> 
 		<th>Caixa </th>
@@ -18,6 +53,6 @@
                 <img width="30" class="img_table" alt="Criar Vendas" src="../assets/img/op.png" />
             </a> 
         </td>
-	</tr> 
-
+	</tr>  
 </table>
+-->

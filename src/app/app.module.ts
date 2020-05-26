@@ -30,6 +30,8 @@ import { MatButtonModule } from  '@angular/material/button';
 import { MatSnackBarModule } from  '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';  
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +60,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatToolbarModule 
+    MatToolbarModule,
+    BrowserAnimationsModule 
+  
   ],
   providers: [{
       provide: LOCALE_ID,
